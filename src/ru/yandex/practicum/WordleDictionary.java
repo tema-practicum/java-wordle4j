@@ -37,7 +37,9 @@ public class WordleDictionary {
     }
 
     public static String normalize(String word) {
-        return word.toLowerCase(Locale.ROOT).replace('ё', 'е');
+        return word.strip()
+                .toLowerCase(Locale.ROOT)
+                .replace('ё', 'е');
     }
 
     public static boolean isValidWord(String word) {
